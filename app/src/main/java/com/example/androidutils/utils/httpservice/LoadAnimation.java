@@ -1,6 +1,7 @@
 package com.example.androidutils.utils.httpservice;
 
 import android.content.Context;
+
 import com.zyao89.view.zloading.ZLoadingDialog;
 import com.zyao89.view.zloading.Z_TYPE;
 
@@ -19,11 +20,9 @@ public class LoadAnimation {
         }
         return loadAnimation;
     }
-
-    public void getLoadListener(Context context, final int Color, final String content, final Z_TYPE CHART_RECT) {
-        OnLoadListener loadListener;
+    public OnLoadListener getLoadListener(Context context, final int Color, final String content, final Z_TYPE CHART_RECT) {
         final ZLoadingDialog dialog = new ZLoadingDialog(context);
-        loadListener = new OnLoadListener() {
+        OnLoadListener loadListener = new OnLoadListener() {
             @Override
             public void onShow() {
                 if (dialog != null) {
@@ -33,7 +32,6 @@ public class LoadAnimation {
                             .show();
                 }
             }
-
             @Override
             public void onConceal() {
                 if (dialog != null) {
@@ -41,5 +39,6 @@ public class LoadAnimation {
                 }
             }
         };
+        return loadListener;
     }
 }
