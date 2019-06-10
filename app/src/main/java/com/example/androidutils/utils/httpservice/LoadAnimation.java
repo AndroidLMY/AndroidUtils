@@ -20,15 +20,20 @@ public class LoadAnimation {
         }
         return loadAnimation;
     }
-    public OnLoadListener getLoadListener(Context context, final int Color, final String content, final Z_TYPE CHART_RECT) {
+
+    public OnLoadListener getLoadListener(Context context, final int loadingColor, final int textColor, final int bgColor, final String content, final Z_TYPE CHART_RECT) {
         final ZLoadingDialog dialog = new ZLoadingDialog(context);
         OnLoadListener loadListener = new OnLoadListener() {
             @Override
             public void onShow() {
                 if (dialog != null) {
                     dialog.setLoadingBuilder(CHART_RECT)//设置类型
-                            .setLoadingColor(Color)//颜色
+                            .setLoadingColor(loadingColor)//颜色
                             .setHintText(content)
+                            .setHintTextSize(16) // 设置字体大小 dp
+                            .setHintTextColor(textColor)  // 设置字体颜色
+                            .setDurationTime(0.5) // 设置动画时间百分比 - 0.5倍
+                            .setDialogBackgroundColor(bgColor) // 设置背景色，默认白色
                             .show();
                 }
             }
