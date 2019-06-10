@@ -10,7 +10,7 @@
         android:layout_height="fill_parent"
         android:background="#00000000" />
 
-    <com.example.androidutils.Start.IndexChangeView
+    <com.example.androidutils.start.IndexChangeView
         android:id="@+id/indexChangeView"
         android:layout_width="fill_parent"
         android:layout_height="30dp"

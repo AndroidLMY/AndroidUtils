@@ -1,4 +1,4 @@
-package com.example.androidutils.Start;
+package com.example.androidutils.start;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -125,6 +125,7 @@ public class IndexChangeView extends View {
     public int getNumber() {
         return number;
     }
+
     /**
      * 圆点当前位置
      *
@@ -136,6 +137,7 @@ public class IndexChangeView extends View {
 
     /**
      * 视图颜色初始位置
+     *
      * @param i
      */
     public void setViewColorChange(int i) {
@@ -165,7 +167,7 @@ public class IndexChangeView extends View {
                     widthLists.add(i, temp);
                 } else if (i < half - 1) {
                     // 一般宽度 - 使用过的宽度
-                    float temp = w / 2 - ((half - (i + 1)) *distance + 10);
+                    float temp = w / 2 - ((half - (i + 1)) * distance + 10);
                     widthLists.add(i, temp);
                 } else if (i > half) {
                     float temp = w / 2 + ((i - half) * distance + 10);

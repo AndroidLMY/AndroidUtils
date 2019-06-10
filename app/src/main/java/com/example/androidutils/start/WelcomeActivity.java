@@ -1,4 +1,4 @@
-package com.example.androidutils.Start;
+package com.example.androidutils.start;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
